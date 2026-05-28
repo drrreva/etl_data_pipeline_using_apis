@@ -46,14 +46,14 @@ CREATE TABLE weather (
     FOREIGN KEY (city_id) REFERENCES cities(city_id)
 );
 
-/*
-SELECT c.city,
-       p.population,
-       p.
-       co.latitude,
-       co.longitude,
-       ctr.country
-FROM cities c
-JOIN population p USING(city_id)
-JOIN coordinates co USING(city_id)
-JOIN country ctr USING(city_id)
+CREATE TABLE flights (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    airport VARCHAR(10),
+    flight_number VARCHAR(20),
+    airline VARCHAR(100),
+    departure_airport VARCHAR(100),
+    departure_iata VARCHAR(10),
+    arrival_time_local VARCHAR(50),
+    status VARCHAR(50),
+    aircraft VARCHAR(100)
+);
